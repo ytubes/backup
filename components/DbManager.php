@@ -73,7 +73,7 @@ class DbManager extends DumpManager
 		$config['password'] = $db->password;
 
 
-		if (preg_match('/dbname=(\w+)?;?+/s', $db->dsn, $matches)) {
+		if (preg_match('/dbname=([a-zA-Z0-9-_]+)?;?+/s', $db->dsn, $matches)) {
 			$config['dbName'] = $matches[1];
 		}
 
