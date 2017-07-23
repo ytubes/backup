@@ -2,6 +2,14 @@
 
 Бекап модуль
 
+
+## Composer
+```json
+"require": {
+    "ytubes/backup": ">=0.0.1"
+},
+```
+
 ## Подключение
 backend/config/components.php,
 console/config/components.php,
