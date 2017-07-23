@@ -84,6 +84,10 @@ abstract class DumpManager extends \yii\base\Component
 	 */
 	public function getDumpFiles()
 	{
+		if (!is_dir($this->backupDirectory)) {
+			return [];
+		}
+
 			// Сортирует по времени модификации в обратном порядке
 		$sort = function ($a, $b) {
             return $b->getMTime() - $a->getMTime();

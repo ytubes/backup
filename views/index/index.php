@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Бекап';
+$this->title = 'Резервное копирование';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		<div class="col-md-12">
 			<div class="box box-default">
 				<div class="box-header with-border">
-					<i class="fa fa-database text-maroon-disabled"></i><h3 class="box-title">Бекапы базы данных</h3>
+					<i class="fa fa-database text-maroon-disabled"></i><h3 class="box-title">Резервные копии базы данных</h3>
 	            </div>
 
 				<?php $form = ActiveForm::begin([
@@ -29,6 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
 						<?php echo GridView::widget([
 						    // полученные данные
 							'dataProvider' => $dbDataProvider,
+							'options' => [
+								'class' => 'table table-striped table-bordered table-responsive'
+							],
 							'columns' => [
 						        [
 						        	'label' => 'Дата создания',
@@ -99,7 +102,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 					<div class="box-footer clearfix">
 					    <div class="form-group">
-							<?= Html::a('<i class="glyphicon glyphicon-export"></i> Создать бекап', ['database/create'], [
+							<?= Html::a('<i class="glyphicon glyphicon-export"></i> Создать копию базы данных', ['database/create'], [
 								'class' => 'btn btn-warning',
 								'title' => 'Создать бекап',
 					            'data' => [
@@ -115,7 +118,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 			<div class="box box-default">
 				<div class="box-header with-border">
-					<i class="fa fa-files-o text-maroon-disabled"></i><h3 class="box-title">Бекапы файлов (без контента)</h3>
+					<i class="fa fa-files-o text-maroon-disabled"></i><h3 class="box-title">Резервные копии файлов сайта (без контента)</h3>
 	            </div>
 
 				<?php $form = ActiveForm::begin([
@@ -126,6 +129,9 @@ $this->params['breadcrumbs'][] = $this->title;
 						<?php echo GridView::widget([
 						    // полученные данные
 							'dataProvider' => $filesDataProvider,
+							'options' => [
+								'class' => 'table table-striped table-bordered table-responsive'
+							],
 							'columns' => [
 						        [
 						        	'label' => 'Дата создания',
@@ -196,7 +202,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 					<div class="box-footer clearfix">
 					    <div class="form-group">
-							<?= Html::a('<i class="glyphicon glyphicon-export"></i> Создать бекап', ['engine/create'], [
+							<?= Html::a('<i class="glyphicon glyphicon-export"></i> Создать копию файлов сайта', ['engine/create'], [
 								'class' => 'btn btn-warning',
 								'title' => 'Создать бекап',
 					            'data' => [
