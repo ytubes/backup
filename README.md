@@ -20,5 +20,5 @@ console/config/components.php,
 ## Крон
 Для периодического бекапа (раз в сутки):
 ```
-\ytubes\backendcron\jobs\Backup 01 00 * * *
+\ytubes\backend\cron\jobs\Backup 01 00 * * *
 ```
