@@ -1,0 +1,16 @@
+{
+    "name": "ytubes/backup",
+    "description": "Бекап модуль",
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "yiisoft/yii2": "~2.0.9",
+        "yiisoft/yii2-jui": "~2.0.0",
+		"symfony/process": "*",
+		"symfony/finder": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ytubes\\backup\\": ""
+        }
+    }
+}
